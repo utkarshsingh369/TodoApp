@@ -1,0 +1,6 @@
+<div class="container">
+    <div *ngFor="let todo of completedTodoArray">
+        <app-design-completed-todos [todo]="todo" (deletingTodo)="onDeleteTodo($event)"></app-design-completed-todos>
+    </div>
+</div>
+

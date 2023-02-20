@@ -1,0 +1,21 @@
+<div class="container">
+    <form (ngSubmit)="onAddTodo()" class="todo-add-form d-flex justify-content-around my-5">
+        <input type="text" name="newTitle" [(ngModel)]="newTitle" placeholder="Title Here..." id="add-todo-title"/>
+        <input type="text" name="newDesc" [(ngModel)]="newDesc" placeholder="Description..." id="add-todo-desc"/>
+        <button id="add-note-button" class="btn btn-warning" type="submit">Add Note</button>
+    </form>
+
+    <div id="all_todos">
+        <ul *ngFor="let todo of todoArray">
+            <!-- <app-todoitemdesign [todo]="todo" (todoCompleted)="todoCompleted($event)" (todoActivated)="todoActivated($event)"></app-todoitemdesign>
+             -->
+             <div *ngIf="!todo.completed then active_todo_div else completed_todo_div"></div>
+             <ng-template #active_todo_div>
+                <app-design-active-todos [todo]="todo" (completingTodo)="onMarkCompleted($event)" ></app-design-active-todos>
+             </ng-template>
+             <ng-template #completed_todo_div>
+                <app-design-completed-todos [todo]="todo" (deletingTodo)="onDeleteTodo($event)"></app-design-completed-todos>
+             </ng-template>
+        </ul>
+    </div>
+</div>

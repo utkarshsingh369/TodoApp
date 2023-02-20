@@ -1,0 +1,42 @@
+.my-todo-container{
+    margin: 3vw;
+    border: 1px solid gray;
+    width: 70%;
+    padding: 0.5vw;
+    border-radius: 10px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: fit-content;
+    justify-content: space-between;
+    background-color: rgba(249, 149, 133, 0.362);
+}
+#todo_title{
+    font-size: 2vw;
+    color:rgb(90, 90, 90);
+    font-weight: 600;
+}
+#todo_desc{
+    font-size: 1vw;
+    color: rgb(146, 146, 146);
+}
+#mark-active-button{
+    height: 4vw;
+    width: 12vw;
+    background-color: rgb(186, 17, 17);
+    color: white;
+    font-size: 1.3vw;
+    align-self: flex-end;
+}
+#mark-active-button-div{
+    align-self: flex-end;
+    /* height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+#completed-label{
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 0.8vw;
+    color: rgb(186, 17, 17);
+}

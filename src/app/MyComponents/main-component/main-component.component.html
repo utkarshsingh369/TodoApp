@@ -1,0 +1,34 @@
+<div class="container">
+    <nav class="navbar navbar-expand-sm navbar-light ">
+        <div class="container-fluid">
+            
+          <ul class="navbar-nav w-100 d-flex justify-content-between">
+            <li class="nav-item">
+              <button class="btn btn-primary" id="nav-buttons" (click)="onAll()">All</button>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-primary" id="nav-buttons" (click)="onActive()">Active</button>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-primary" id="nav-buttons" (click)="onComplete()">Completed</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</div>
+<div class="container">
+    <div *ngIf="allSelected then all_todos else else_part"></div>
+    <ng-template #all_todos >
+      <app-all-todos [todoArray]="todoArray" (addedTodo)="addTodo($event)" (completingTodo)="onMarkCompleted($event)" (deletingTodo)="onDeleteTodo($event)"></app-all-todos>
+    </ng-template>
+    <ng-template #else_part>
+      <div *ngIf="activeSelected then active_todos else completed_todos">
+      </div>
+    <ng-template #active_todos>
+      <app-active-todos [todoArray]="todoArray" (completingTodo)="onMarkCompleted($event)"></app-active-todos>
+    </ng-template>
+    <ng-template #completed_todos>
+      <app-completed-todos [todoArray]="todoArray" (deletingTodo)="onDeleteTodo($event)"></app-completed-todos>
+    </ng-template>
+    </ng-template>
+  </div>

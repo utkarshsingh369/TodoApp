@@ -1,0 +1,22 @@
+.navbar{
+    background-color: rgb(240, 240, 240);
+    color: blue ;
+}
+.nav-item{
+    width: 20%;
+}
+#nav-buttons{
+    width: 100% !important;
+    font-size: 1vw;
+    letter-spacing: 0.15vw;
+    border: 1px solid #0d6efd;
+    background-color: rgb(240, 240, 240);
+    color: #0d6efd;
+}
+#nav-buttons:hover{
+    background-color: white;
+}
+#nav-buttons:active{
+    background-color: #0d6efd;
+    color: white;
+}

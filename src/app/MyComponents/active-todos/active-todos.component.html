@@ -1,0 +1,5 @@
+<div class="container">
+    <div *ngFor="let todo of activeTodoArray">
+        <app-design-active-todos [todo]="todo" (completingTodo)="onMarkCompleted($event)"></app-design-active-todos>
+    </div>
+</div>

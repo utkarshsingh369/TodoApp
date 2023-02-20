@@ -1,0 +1,8 @@
+<div class="my-todo-container d-flex">
+    <div class="my-form-check">
+        <!-- <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> -->
+        <p id="todo_title">{{todo.title}}</p>
+        <p id="todo_desc">{{todo.desc}}</p>
+      </div>
+      <input id="mark-active-button" type="button" class="btn btn-success" value="Mark As Complete" (click)="onMarkCompleted()">
+</div>
